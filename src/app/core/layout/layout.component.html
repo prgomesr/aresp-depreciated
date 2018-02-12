@@ -1,0 +1,101 @@
+<div class="aw-layout-loading  js-loading-overlay">
+  <div class="aw-layout-loading__container">
+    <span class="aw-balls-spinner">Carregando...</span>
+  </div>
+</div>
+
+<div class="aw-layout-page">
+
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="row mr-auto">
+        <a href="#" class="navbar-toggler js-sidebar-toggle"><i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+  </nav>
+
+  <aside class="aw-layout-sidebar  js-sidebar">
+    <div class="aw-layout-sidebar__content">
+
+      <nav class="aw-menu  js-menu">
+        <ul class="aw-menu__list">
+
+          <li class="aw-menu__item">
+            <a routerLink="/dashboard" routerLinkActive="is-active"><i class="fa  fa-fw  fa-dashboard"></i><span>Dashboard</span></a>
+          </li>
+
+          <li class="aw-menu__item">
+            <a href="#">
+              <i class="fa  fa-fw  fa-globe"></i><span>Cadastros</span>
+              <i class="aw-menu__navigation-icon  fa"></i>
+            </a>
+            <ul class="aw-menu__list  aw-menu__list--sublist">
+              <li class="aw-menu__item  aw-menu__item--link"><a href="cadastro-produto.html">Cliente</a></li>
+              <li class="aw-menu__item  aw-menu__item--link"><a href="pesquisa-produtos.html">Fornecedor</a></li>
+              <li class="aw-menu__item  aw-menu__item--link"><a href="tabela-sem-dados.html">Empresa</a></li>
+            </ul>
+          </li>
+
+          <li class="aw-menu__item">
+            <a href="#">
+              <i class="fa  fa-fw  fa-file"></i><span>Diversos</span>
+              <i class="aw-menu__navigation-icon  fa"></i>
+            </a>
+            <ul class="aw-menu__list  aw-menu__list--sublist">
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/banco">Banco</a></li>
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/convenio">Cônvenio</a></li>
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/grupo">Grupo</a></li>
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/operadora">Operadora</a></li>
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/secretaria">Secretaria</a></li>
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/status-parcela">Status Parcela</a></li>
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/tipo-pagamento">Tipo Pagamento</a></li>
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/tipo-recebimento">Tipo Recebimento</a></li>
+              <li class="aw-menu__item  aw-menu__item--link" routerLinkActive="is-active"><a routerLink="/diversos/tipo-socio">Tipo Sócio</a></li>
+            </ul>
+          </li>
+
+          <li class="aw-menu__item">
+            <a href="#">
+              <i class="fa  fa-fw  fa-suitcase"></i><span>Financeiro</span>
+              <i class="aw-menu__navigation-icon  fa"></i>
+            </a>
+            <ul class="aw-menu__list  aw-menu__list--sublist">
+              <li class="aw-menu__item  aw-menu__item--link"><a href="cadastro-produto.html">Contas a Receber</a></li>
+              <li class="aw-menu__item  aw-menu__item--link"><a href="pesquisa-produtos.html">Contas a Pagar</a></li>
+              <li class="aw-menu__item  aw-menu__item--link"><a href="tabela-sem-dados.html">Cheque</a></li>
+              <li class="aw-menu__item  aw-menu__item--link"><a href="tabela-sem-dados.html">Relatórios</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </aside>
+
+  <section class="aw-layout-content  js-content">
+
+    <router-outlet></router-outlet>
+
+  </section>
+
+  <footer class="aw-layout-footer  js-content">
+    <div class="container-fluid">
+      <span class="aw-footer-disclaimer">&copy; 2018 Aresp. Todos os direitos reservados.</span>
+    </div>
+  </footer>
+
+</div>
+
+<div class="aw-search-modal  js-search-modal">
+  <form action="#" class="aw-search-modal__form">
+    <input class="aw-search-modal__input  js-search-modal-input" type="text" placeholder="O que você está procurando?"/>
+    <div class="aw-search-modal__input-icon">
+      <i class="glyphicon  glyphicon-search  js-search-modal-go"></i>
+    </div>
+  </form>
+
+  <div class="aw-search-modal__controls">
+    <i class="glyphicon glyphicon-remove  js-search-modal-close"></i>
+  </div>
+</div>

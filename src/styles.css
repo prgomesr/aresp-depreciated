@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+
+.navbar{
+  padding: 12px 0;
+  background-color: #1e94d2;
+  z-index: 9998;
+}
+
+.navbar-toggler{
+  color: #fff;
+}
+
+.col-id{
+  width: 50px;
+}
+
+.col-check{
+  width: 30px;
+  text-align: center;
+}
+
+.col-90{
+  width: 90px;
+}
+
+.col-acoes{
+  width: 80px;
+  text-align: center;
+}
+
+.col-120{
+  width: 120px;
+}
+
+.col-150{
+  width: 150px;
+}
+
+.col-200{
+  width: 200px;
+}
