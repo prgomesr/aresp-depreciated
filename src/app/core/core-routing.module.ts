@@ -19,7 +19,8 @@ const routes: Routes = [
       { path: 'diversos/status-parcela', loadChildren: '../cadastros/diversos/status-parcela/status-parcela.module#StatusParcelaModule' },
       { path: 'diversos/tipo-pagamento', loadChildren: '../cadastros/diversos/tipo-pagamento/tipo-pagamento.module#TipoPagamentoModule' },
       { path: 'diversos/tipo-recebimento', loadChildren: '../cadastros/diversos/tipo-recebimento/tipo-recebimento.module#TipoRecebimentoModule' },
-      { path: 'diversos/tipo-socio', loadChildren: '../cadastros/diversos/tipo-socio/tipo-socio.module#TipoSocioModule' }
+      { path: 'diversos/tipo-socio', loadChildren: '../cadastros/diversos/tipo-socio/tipo-socio.module#TipoSocioModule' },
+      { path: 'instancias/cliente', loadChildren: '../cadastros/instancias/cliente/cliente.module#ClienteModule' },
     ]
   }
 ];

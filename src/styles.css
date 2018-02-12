@@ -39,3 +39,16 @@
 .col-200{
   width: 200px;
 }
+
+.col-status{
+  width: 110px;
+}
+
+.status-span{
+  text-transform: uppercase;
+}
+
+.col-cpf{
+  text-align: center;
+  width: 150px;
+}
