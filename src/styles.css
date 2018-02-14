@@ -11,6 +11,7 @@
 }
 
 .col-id{
+  text-align: center;
   width: 50px;
 }
 
@@ -52,3 +53,4 @@
   text-align: center;
   width: 150px;
 }
+

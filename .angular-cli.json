@@ -30,7 +30,8 @@
         "../node_modules/jquery/dist/jquery.min.js",
         "../node_modules/popper.js/dist/umd/popper.min.js",
         "../src/assets/template/js/algaworks.js",
-        "../src/assets/template/js/vendors.js"
+        "../src/assets/template/js/vendors.js",
+        "../src/assets/template/js/steps.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
