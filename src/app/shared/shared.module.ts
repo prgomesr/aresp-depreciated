@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { TooltipModule } from 'primeng/tooltip';
 import { DataTableModule } from 'primeng/datatable';
+import { TabViewModule } from 'primeng/tabview';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { DataTableModule } from 'primeng/datatable';
   declarations: [],
   exports: [
     TooltipModule,
-    DataTableModule
+    DataTableModule,
+    TabViewModule
   ]
 })
 export class SharedModule { }

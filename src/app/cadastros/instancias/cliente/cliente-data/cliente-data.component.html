@@ -1,7 +1,12 @@
 <div class="container">
 
-  <div class="col-md">
+  <div class="col-md clearfix">
+  <div class="float-left ml-auto">
     <h1>Cadastro de Cliente</h1>
+  </div>
+  <div class="float-right mr-auto">
+    <button class="btn btn-outline-primary" routerLink="/instancias/cliente"><i class="fa fa-search"></i>Voltar para a pesquisa</button>
+  </div>
   </div>
 
   <div class="col-md">
@@ -9,252 +14,40 @@
   </div>
 
   <div class="col-md">
-
-  </div>
-
-  <div class="col-md">
     <form>
-
-      <div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
+      <p-tabView>
+        <p-tabPanel header="Dados Pessoais" leftIcon="fa fa-user">
+          <div class="form-row">
+            <div class="col-md-4 mb-3">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="numero">Número</label>
+              <input type="text" class="form-control" id="numero" required>
+            </div>
+            <div class="col-md-4 mb-3">
+              <label for="tel">Telefone</label>
+              <input type="text" class="form-control" id="tel">
+            </div>
+          </div>
+        </p-tabPanel>
+        <p-tabPanel header="Contato" leftIcon="fa fa-address-book">
+          Content 2
+        </p-tabPanel>
+        <p-tabPanel header="Dados Bancários" leftIcon="fa fa-credit-card">
+          Content 3
+        </p-tabPanel>
+        <p-tabPanel header="Dependentes" leftIcon="fa fa-users">
+          <div class="form-row">
+            <label for="tel2">Telefone</label>
+            <input type="text" class="form-control" id="tel2">
+          </div>
+        </p-tabPanel>
+      </p-tabView>
+      <div class="col-md">
+        <button class="btn btn-primary" type="submit">Salvar</button>
       </div>
-      <div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div><div class="form-row">
-        <div class="col-md-4 mb-3">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
-        </div>
-        <div class="col-md-4 mb-3">
-          <label for="tel">Telefone</label>
-          <input type="text" class="form-control" id="tel">
-        </div>
-      </div>
-
-      <button class="btn btn-primary" type="submit">Salvar</button>
-      <button class="btn btn-outline-primary" routerLink="/instancias/cliente"><i class="fa fa-search"></i>Voltar para a pesquisa</button>
-
     </form>
   </div>
 </div>
