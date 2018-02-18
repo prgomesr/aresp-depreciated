@@ -15,7 +15,7 @@
 
   <div class="col-md">
     <form>
-      <p-tabView>
+      <p-tabView [activeIndex]="index">
         <p-tabPanel header="Dados Pessoais" leftIcon="fa fa-user">
           <div class="form-row">
             <div class="col-md-4 mb-3">
@@ -30,10 +30,18 @@
               <label for="tel">Telefone</label>
               <input type="text" class="form-control" id="tel">
             </div>
+            <!--<div class="col-md">
+              <button type="button" class="btn btn-info" (click)="openNext()">Próximo</button>
+            </div>-->
           </div>
         </p-tabPanel>
         <p-tabPanel header="Contato" leftIcon="fa fa-address-book">
-          Content 2
+          <div class="form-row">
+            <!--<div class="col-md">
+              <button type="button" class="btn btn-info" (click)="openPrev()">Anterior</button>
+              <button type="button" class="btn btn-info" (click)="openNext()">Próximo</button>
+            </div>-->
+          </div>
         </p-tabPanel>
         <p-tabPanel header="Dados Bancários" leftIcon="fa fa-credit-card">
           Content 3
@@ -45,9 +53,6 @@
           </div>
         </p-tabPanel>
       </p-tabView>
-      <div class="col-md">
-        <button class="btn btn-primary" type="submit">Salvar</button>
-      </div>
     </form>
   </div>
 </div>

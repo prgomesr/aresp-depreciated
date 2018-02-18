@@ -6,6 +6,7 @@ import {BancoDataComponent} from './banco-data/banco-data.component';
 import {SharedModule} from '../../../shared/shared.module';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
