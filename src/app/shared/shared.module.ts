@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { TooltipModule } from 'primeng/tooltip';
 import { DataTableModule } from 'primeng/datatable';
 import { TabViewModule } from 'primeng/tabview';
 import { CalendarModule } from 'primeng/calendar';
-import {FormsModule} from '@angular/forms';
+import { FileUploadModule } from 'primeng/fileupload';
 
 @NgModule({
   imports: [
@@ -14,11 +15,12 @@ import {FormsModule} from '@angular/forms';
   ],
   declarations: [],
   exports: [
+    FormsModule,
     TooltipModule,
     DataTableModule,
     TabViewModule,
     CalendarModule,
-    FormsModule
+    FileUploadModule
   ]
 })
 export class SharedModule { }

@@ -38,6 +38,7 @@
             <!--<div class="col-md">
               <button type="button" class="btn btn-info" (click)="openNext()">Próximo</button>
             </div>-->
+
             <div class="form-row col-md-12">
                 <div class="col-md-2" style="margin-right: -40px">
                   <label>Sexo</label>
@@ -66,6 +67,72 @@
                 <input type="text" class="form-control" id="mae">
               </div>
             </div>
+
+            <div class="form-row col-md-12">
+
+              <div class="form-group col-md-4">
+                <label for="civil">Estado Civil</label>
+                <select class="form-control" id="civil">
+                  <option value="">Selecione:</option>
+                  <option value="S">Solteiro (a)</option>
+                  <option value="C">Casado (a)</option>
+                  <option value="U">União Estável</option>
+                  <option value="D">Divorcidado (a)</option>
+                  <option value="V">Viúvo (a)</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="socio">Tipo de Sócio</label>
+                <select class="form-control" id="socio">
+                  <option value="">Selecione:</option>
+                  <option value="1">Sócio Contribuinte</option>
+                  <option value="2">Funcionário Público</option>
+                  <option value="3">Dependente Especial</option>
+                </select>
+              </div>
+
+              <div class="form-group col-md-4">
+                <label for="sec">Secretaria</label>
+                <select class="form-control" id="sec">
+                  <option value="">Selecione:</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="form-row col-md-12">
+
+              <div class="form-group col-md-12">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email">
+              </div>
+
+            </div>
+
+            <div class="form-row col-md-12">
+                <div class="form-group col-md-12">
+                  <label>Foto 3x4</label>
+                  <p-fileUpload name="demo[]" url="./upload.php" (onUpload)="onUpload($event)"
+                                multiple="multiple" accept="image/*" maxFileSize="1000000">
+                    <ng-template pTemplate="content">
+                      <ul *ngIf="uploadedFiles.length">
+                        <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                      </ul>
+                    </ng-template>
+                  </p-fileUpload>
+                </div>
+            </div>
+
+            <div class="form-row col-md-12">
+
+              <div class="form-group col-md-12">
+                <label for="obs">Observação</label>
+                <textarea class="form-control" id="obs" cols="30" rows="3"></textarea>
+              </div>
+
+            </div>
+
           </div>
         </p-tabPanel>
         <p-tabPanel header="Contato" leftIcon="fa fa-address-book">
