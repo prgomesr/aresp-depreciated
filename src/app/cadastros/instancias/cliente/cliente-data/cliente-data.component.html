@@ -17,22 +17,55 @@
     <form>
       <p-tabView [activeIndex]="index">
         <p-tabPanel header="Dados Pessoais" leftIcon="fa fa-user">
-          <div class="form-row">
-            <div class="col-md-4 mb-3">
+          <div class="form-row col-md-12 mt-3">
+            <div class="form-group col-md-3">
+              <label for="cpf">CPF</label>
+              <input type="text" class="form-control" id="cpf" required>
+            </div>
+            <div class="form-group col-md-2">
+              <label for="rg">RG</label>
+              <input type="text" class="form-control" id="rg" required>
+            </div>
+            <div class="form-group col-md-4">
               <label for="nome">Nome</label>
-              <input type="text" class="form-control" id="nome" required>
+              <input type="text" class="form-control" id="nome">
             </div>
-            <div class="col-md-4 mb-3">
-              <label for="numero">Número</label>
-              <input type="text" class="form-control" id="numero" required>
-            </div>
-            <div class="col-md-4 mb-3">
-              <label for="tel">Telefone</label>
-              <input type="text" class="form-control" id="tel">
+            <div class="col-md-3">
+              <label for="nasc">Nascimento</label>
+              <p-calendar [(ngModel)]="dateValue" [locale]="pt" dateFormat="dd/mm/yy" [showIcon]="true"
+                          [monthNavigator]="true" [yearNavigator]="true" yearRange="1930:2030" id="nasc"></p-calendar>
             </div>
             <!--<div class="col-md">
               <button type="button" class="btn btn-info" (click)="openNext()">Próximo</button>
             </div>-->
+            <div class="form-row col-md-12">
+                <div class="col-md-2" style="margin-right: -40px">
+                  <label>Sexo</label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="sexo" id="masc" value="Masculino" checked>
+                      <label class="form-check-label" for="masc">
+                        Masculino
+                      </label>
+                    </div>
+                </div>
+              <div class="col-md-2 mt-2 mr-auto">
+                <label></label>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="sexo" id="fem" value="Feminino">
+                      <label class="form-check-label" for="fem">
+                        Feminino
+                      </label>
+                    </div>
+                </div>
+              <div class="form-group col-md-4">
+                <label for="pai">Nome do Pai</label>
+                <input type="text" class="form-control" id="pai">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="mae">Nome da Mãe</label>
+                <input type="text" class="form-control" id="mae">
+              </div>
+            </div>
           </div>
         </p-tabPanel>
         <p-tabPanel header="Contato" leftIcon="fa fa-address-book">
