@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-cliente-data',
@@ -7,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteDataComponent implements OnInit {
 
-  constructor() { }
+  tiposSocios = ['Sócio Contribuinte', 'Funcionário Público', 'Dependente Especial'];
+  secretarias = ['Segurança Pública', 'Educação', 'Tribunal de Justiça'];
 
+  constructor() { }
   pt: any;
   uploadedFiles: any[] = [];
   onUpload(event) {
@@ -30,6 +33,10 @@ export class ClienteDataComponent implements OnInit {
       today: 'Hoje',
       clear: 'Limpar'
     };
+  }
+
+  salvar (form: NgForm) {
+    console.log(form);
   }
 
 }

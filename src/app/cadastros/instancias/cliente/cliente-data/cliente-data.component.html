@@ -14,26 +14,29 @@
   </div>
 
   <div class="col-md">
-    <form>
+    <form #clienteForm="ngForm" (ngSubmit)="salvar(clienteForm)">
+      <button type="submit">Salvar</button>
       <p-tabView [activeIndex]="index">
         <p-tabPanel header="Dados Pessoais" leftIcon="fa fa-user">
+
           <div class="form-row col-md-12 mt-3">
             <div class="form-group col-md-3">
               <label for="cpf">CPF</label>
-              <input type="text" class="form-control" id="cpf" required>
+              <input type="text" class="form-control" name="cpf" id="cpf" required ngModel>
             </div>
             <div class="form-group col-md-2">
               <label for="rg">RG</label>
-              <input type="text" class="form-control" id="rg" required>
+              <input type="text" class="form-control" id="rg" required ngModel name="rg">
             </div>
             <div class="form-group col-md-4">
               <label for="nome">Nome</label>
-              <input type="text" class="form-control" id="nome">
+              <input type="text" class="form-control" id="nome" ngModel name="nome">
             </div>
             <div class="col-md-3">
               <label for="nasc">Nascimento</label>
               <p-calendar [(ngModel)]="dateValue" [locale]="pt" dateFormat="dd/mm/yy" [showIcon]="true"
-                          [monthNavigator]="true" [yearNavigator]="true" yearRange="1930:2030" id="nasc"></p-calendar>
+                          [monthNavigator]="true" [yearNavigator]="true" yearRange="1930:2030" id="nasc"
+                          ngModel name="nascimento"></p-calendar>
             </div>
             <!--<div class="col-md">
               <button type="button" class="btn btn-info" (click)="openNext()">Próximo</button>
@@ -43,7 +46,8 @@
                 <div class="col-md-2" style="margin-right: -40px">
                   <label>Sexo</label>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="sexo" id="masc" value="Masculino" checked>
+                      <input class="form-check-input" type="radio" name="sexo" id="masc" value="Masculino"
+                             ngModel name="masc" checked>
                       <label class="form-check-label" for="masc">
                         Masculino
                       </label>
@@ -52,7 +56,8 @@
               <div class="col-md-2 mt-2 mr-auto">
                 <label></label>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="sexo" id="fem" value="Feminino">
+                      <input class="form-check-input" type="radio" name="sexo" id="fem" value="Feminino"
+                             ngModel name="fem">
                       <label class="form-check-label" for="fem">
                         Feminino
                       </label>
@@ -60,11 +65,11 @@
                 </div>
               <div class="form-group col-md-4">
                 <label for="pai">Nome do Pai</label>
-                <input type="text" class="form-control" id="pai">
+                <input type="text" class="form-control" id="pai" ngModel name="pai">
               </div>
               <div class="form-group col-md-4">
                 <label for="mae">Nome da Mãe</label>
-                <input type="text" class="form-control" id="mae">
+                <input type="text" class="form-control" id="mae" ngModel name="mae">
               </div>
             </div>
 
@@ -72,7 +77,7 @@
 
               <div class="form-group col-md-4">
                 <label for="civil">Estado Civil</label>
-                <select class="form-control" id="civil">
+                <select class="form-control" id="civil" ngModel name="estadoCivil">
                   <option value="">Selecione:</option>
                   <option value="S">Solteiro (a)</option>
                   <option value="C">Casado (a)</option>
@@ -84,18 +89,17 @@
 
               <div class="form-group col-md-4">
                 <label for="socio">Tipo de Sócio</label>
-                <select class="form-control" id="socio">
+                <select class="form-control" id="socio" ngModel name="tipoSocio">
                   <option value="">Selecione:</option>
-                  <option value="1">Sócio Contribuinte</option>
-                  <option value="2">Funcionário Público</option>
-                  <option value="3">Dependente Especial</option>
+                  <option *ngFor="let tSocio of tiposSocios">{{ tSocio }}</option>
                 </select>
               </div>
 
               <div class="form-group col-md-4">
                 <label for="sec">Secretaria</label>
-                <select class="form-control" id="sec">
+                <select class="form-control" id="sec" ngModel name="secretaria">
                   <option value="">Selecione:</option>
+                  <option *ngFor="let secretaria of secretarias">{{ secretaria }}</option>
                 </select>
               </div>
 
@@ -105,7 +109,7 @@
 
               <div class="form-group col-md-12">
                 <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="email">
+                <input type="email" class="form-control" id="email" ngModel name="email">
               </div>
 
             </div>
@@ -128,7 +132,7 @@
 
               <div class="form-group col-md-12">
                 <label for="obs">Observação</label>
-                <textarea class="form-control" id="obs" cols="30" rows="3"></textarea>
+                <textarea class="form-control" id="obs" cols="30" rows="3" ngModel name="obs"></textarea>
               </div>
 
             </div>
