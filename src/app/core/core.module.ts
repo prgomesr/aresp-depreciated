@@ -10,12 +10,14 @@ import { LoginComponent } from './login/login.component';
 
 
 
+
 @NgModule({
   imports: [
     CommonModule,
     CoreRoutingModule
   ],
-  declarations: [LayoutComponent, DashboardComponent, Pagina404Component, AcessoNegadoComponent, Pagina500Component, LoginComponent],
+  declarations: [LayoutComponent, DashboardComponent, Pagina404Component, AcessoNegadoComponent, Pagina500Component,
+    LoginComponent],
   exports: [LayoutComponent, Pagina404Component, AcessoNegadoComponent, Pagina500Component, LoginComponent]
 })
 export class CoreModule { }

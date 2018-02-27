@@ -11,8 +11,6 @@
   <div class="col-md">
     <div class="btn-toolbar" role="toolbar">
       <div class="btn-group mr-2" role="group">
-        <button type="button" class="btn btn-outline-secondary fa fa-check-square-o"
-                pTooltip="Selecionar todos" tooltipPosition="top"></button>
         <button type="button" class="btn btn-outline-secondary fa fa-trash-o"
                 pTooltip="Excluir" tooltipPosition="top"></button>
       </div>
@@ -30,12 +28,9 @@
   </div>
 
   <div class="col-md" style="margin-top: 10px">
-    <p-dataTable [value]="clientes" [paginator]="true" [rows]="10" [responsive]="true">
-      <p-column styleClass="col-check">
-        <ng-template pTemplate="body">
-          <input type="checkbox">
-        </ng-template>
-      </p-column>
+    <p-dataTable [value]="dados" [paginator]="true" [rows]="10" [responsive]="true"
+      [rowsPerPageOptions]="[5,10,15,20,25]">
+      <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
       <p-column field="id" header="Id" styleClass="col-id"></p-column>
       <p-column field="nome" header="Nome"></p-column>
       <p-column field="cpf" header="CPF" styleClass="col-cpf"></p-column>

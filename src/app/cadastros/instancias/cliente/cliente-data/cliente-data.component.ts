@@ -8,10 +8,20 @@ import {NgForm} from '@angular/forms';
 })
 export class ClienteDataComponent implements OnInit {
 
-  tiposSocios = ['Sócio Contribuinte', 'Funcionário Público', 'Dependente Especial'];
+  tiposSocios: [any];
   secretarias = ['Segurança Pública', 'Educação', 'Tribunal de Justiça'];
 
-  constructor() { }
+  types: [any];
+
+  constructor() {
+    this.types = [
+      {label: '', value: 'Masculino', icon: 'fa fa-male'},
+      {label: '', value: 'Feminino', icon: 'fa fa-female'}
+    ];
+    this.tiposSocios = [
+      {name: 'Sócio Contribuinte', code: '1'}
+      ];
+  }
   pt: any;
   uploadedFiles: any[] = [];
   onUpload(event) {
