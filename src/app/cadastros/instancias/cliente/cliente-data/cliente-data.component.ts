@@ -8,19 +8,41 @@ import {NgForm} from '@angular/forms';
 })
 export class ClienteDataComponent implements OnInit {
 
-  tiposSocios: [any];
-  secretarias = ['Segurança Pública', 'Educação', 'Tribunal de Justiça'];
+  tiposSocios = [
+    {label: 'Sócio Contribuinte', value: 1},
+    {label: 'Funcionário Público', value: 2},
+    {label: 'Dependente Especial', value: 3}
+    ];
+  estCivil = [
+    { label: 'Solteiro (a)', value: 1 },
+    { label: 'Casado (a)', value: 2 },
+    { label: 'União Estável', value: 3 },
+    { label: 'Divorcidado (a)', value: 4 },
+    { label: 'Viúvo (a)', value: 5 }
+  ];
+  secretarias = [
+    {label: 'Segurança Pública', value: 1},
+    {label: 'Educação', value: 2},
+    {label: 'Tribunal de Justiça', value: 3}
+    ];
+  bancos = [
+    {label: 'Banco do Brasil', value: 1},
+    {label: 'Santander', value: 2},
+    {label: 'Bradesco', value: 3}
+    ];
+  operadoras = [
+    {label: 'Visa', value: 1},
+    {label: 'Master', value: 2},
+    {label: 'Dinners', value: 3},
+    {label: 'Elo', value: 4}
+    ];
 
-  types: [any];
+  sexo = [
+    {label: '', value: 'Masculino', icon: 'fa fa-male'},
+    {label: '', value: 'Feminino', icon: 'fa fa-female'}
+    ];
 
   constructor() {
-    this.types = [
-      {label: '', value: 'Masculino', icon: 'fa fa-male'},
-      {label: '', value: 'Feminino', icon: 'fa fa-female'}
-    ];
-    this.tiposSocios = [
-      {name: 'Sócio Contribuinte', code: '1'}
-      ];
   }
   pt: any;
   uploadedFiles: any[] = [];

@@ -12,6 +12,8 @@ import { FileUploadModule } from 'primeng/fileupload';
 import { InputTextModule } from 'primeng/inputtext';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownModule } from 'primeng/dropdown';
+import { InputMaskModule } from 'primeng/inputmask';
+import { InputTextareaModule } from 'primeng/inputtextarea';
 
 @NgModule({
   imports: [
@@ -30,7 +32,9 @@ import { DropdownModule } from 'primeng/dropdown';
     FileUploadModule,
     InputTextModule,
     SelectButtonModule,
-    DropdownModule
+    DropdownModule,
+    InputTextareaModule,
+    InputMaskModule
   ]
 })
 export class SharedModule { }
