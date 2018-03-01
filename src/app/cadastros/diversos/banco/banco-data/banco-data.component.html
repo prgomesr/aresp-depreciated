@@ -9,16 +9,18 @@
   </div>
 
   <div class="col-md">
-    <form>
+    <form #bancoForm="ngForm" (ngSubmit)="(bancoForm)" autocomplete="off">
 
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" required>
+          <input type="text" class="form-control" id="nome" required ngModel name="nome" #nome="ngModel">
+          <app-message [control]="nome" error="required" text="Preencha este campo."></app-message>
         </div>
         <div class="col-md-4 mb-3">
           <label for="numero">Número</label>
-          <input type="text" class="form-control" id="numero" required>
+          <input type="text" class="form-control" id="numero" required name="numero" #numero="ngModel" ngModel>
+          <app-message [control]="numero" error="required" text="Preencha este campo."></app-message>
         </div>
         <div class="col-md-4 mb-3">
           <label for="tel">Telefone</label>

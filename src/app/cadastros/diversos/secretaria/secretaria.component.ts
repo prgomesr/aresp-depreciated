@@ -11,7 +11,6 @@ export class SecretariaComponent implements OnInit {
     {id: '1', nome: 'Segurança Pública'}
   ];
   cols = [
-    {field: 'id', header: 'Id'},
     {field: 'nome', header: 'Nome'}
   ];
   constructor() { }

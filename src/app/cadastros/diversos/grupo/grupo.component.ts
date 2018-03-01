@@ -11,7 +11,6 @@ export class GrupoComponent implements OnInit {
     {id: '1', nome: 'BB1'}
   ];
   cols = [
-    {field: 'id', header: 'Id'},
     {field: 'nome', header: 'Nome'}
   ];
 

@@ -11,7 +11,6 @@ export class TipoPagamentoComponent implements OnInit {
     {id: '1', nome: 'Cheque'}]
   ;
   cols = [
-    {field: 'id', header: 'Id'},
     {field: 'nome', header: 'Nome'}
   ];
   constructor() { }

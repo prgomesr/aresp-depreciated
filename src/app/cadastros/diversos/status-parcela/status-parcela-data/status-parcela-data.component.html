@@ -9,12 +9,13 @@
   </div>
 
   <div class="col-md">
-    <form>
+    <form #statusForm="ngForm" (ngSubmit)="salvar(statusForm)" autocomplete="off">
 
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="nome">Situação</label>
-          <input type="text" class="form-control" id="nome" required>
+          <input type="text" class="form-control" id="nome" required name="nome" #nome="ngModel" ngModel>
+          <app-message [control]="nome" error="required" text="Preencha este campo."></app-message>
         </div>
         <div class="col-md-4 mb-3">
           <label for="desc">Descrição</label>

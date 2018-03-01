@@ -11,7 +11,6 @@ export class OperadoraComponent implements OnInit {
     {id: '1', nome: 'Visa', imagem: 'imagem.jpg' }
   ];
   cols = [
-    {field: 'id', header: 'Id'},
     {field: 'nome', header: 'Nome'},
     {field: 'imagem', header: 'Imagem'}
   ];

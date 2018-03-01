@@ -11,7 +11,6 @@ export class TipoRecebimentoComponent implements OnInit {
     {id: '1', nome: 'Aluguel de Quadra'}]
   ;
   cols = [
-    {field: 'id', header: 'Id'},
     {field: 'nome', header: 'Nome'}
   ];
   constructor() { }

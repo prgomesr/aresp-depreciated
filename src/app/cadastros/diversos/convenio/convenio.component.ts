@@ -20,7 +20,6 @@ export class ConvenioComponent implements OnInit {
     {id: '11', nome: 'Teste', numero: '', telefone: '', observacao: ''}
   ];
   cols = [
-    {field: 'id', header: 'Id'},
     {field: 'nome', header: 'Nome'},
     {field: 'numero', header: 'Número'},
     {field: 'telefone', header: 'Telefone'},

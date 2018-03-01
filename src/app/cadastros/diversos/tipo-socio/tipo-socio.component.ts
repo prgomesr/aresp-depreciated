@@ -11,7 +11,6 @@ export class TipoSocioComponent implements OnInit {
     {id: '1', nome: 'Sócio Contribuinte'}]
   ;
   cols = [
-    {field: 'id', header: 'Id'},
     {field: 'nome', header: 'Nome'}
   ];
   constructor() { }
