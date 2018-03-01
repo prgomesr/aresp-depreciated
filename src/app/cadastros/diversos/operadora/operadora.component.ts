@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperadoraComponent implements OnInit {
 
-  operadoras = [
+  dados = [
     {id: '1', nome: 'Visa', imagem: 'imagem.jpg' }
+  ];
+  cols = [
+    {field: 'id', header: 'Id'},
+    {field: 'nome', header: 'Nome'},
+    {field: 'imagem', header: 'Imagem'}
   ];
   constructor() { }
 

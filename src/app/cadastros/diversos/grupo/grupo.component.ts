@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GrupoComponent implements OnInit {
 
-  grupos = [
+  dados = [
     {id: '1', nome: 'BB1'}
+  ];
+  cols = [
+    {field: 'id', header: 'Id'},
+    {field: 'nome', header: 'Nome'}
   ];
 
   constructor() { }

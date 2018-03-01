@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatusParcelaComponent implements OnInit {
 
-  parcelas = [
+  dados = [
     {id: '1', situacao: 'Em dia', descricao: ''}
+  ];
+  cols = [
+    {field: 'id', header: 'Id'},
+    {field: 'situacao', header: 'Situaçao'},
+    {field: 'descricao', header: 'Descrição'}
   ];
   constructor() { }
 

@@ -7,8 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecretariaComponent implements OnInit {
 
-  secretarias = [
+  dados = [
     {id: '1', nome: 'Segurança Pública'}
+  ];
+  cols = [
+    {field: 'id', header: 'Id'},
+    {field: 'nome', header: 'Nome'}
   ];
   constructor() { }
 

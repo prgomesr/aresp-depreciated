@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoSocioComponent implements OnInit {
 
-  tipos = [
+  dados = [
     {id: '1', nome: 'Sócio Contribuinte'}]
   ;
+  cols = [
+    {field: 'id', header: 'Id'},
+    {field: 'nome', header: 'Nome'}
+  ];
   constructor() { }
 
   ngOnInit() {
