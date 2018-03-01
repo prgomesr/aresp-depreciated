@@ -7,8 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BancoComponent implements OnInit {
 
-  bancos = [
-    {id: '1', nome: 'Banco do Brasil', numero: '001', telefone: '11 4444-4444'}
+  dados = [
+    {id: '1', nome: 'Banco do Brasil', numero: '001', telefone: '11 4444-4444'},
+    {id: '2', nome: 'Banco do Brasil', numero: '001', telefone: '11 4444-4444'}
+  ];
+  cols = [
+    {field: 'id', header: 'Id'},
+    {field: 'nome', header: 'Nome'},
+    {field: 'numero', header: 'Número'},
+    {field: 'telefone', header: 'Telefone'}
   ];
   constructor() { }
 

@@ -21,9 +21,7 @@
         <div class="ui-fluid ui-g-2 ui-sm-12">
           <label>CPF</label>
           <p-inputMask mask="999.999.999-99" name="cpf" ngModel required #cpf="ngModel"></p-inputMask>
-          <div class="alert alert-danger" *ngIf="cpf.hasError('required') && cpf.dirty">
-            Preencha este campo.
-          </div>
+          <app-message [control]="cpf" error="required" text="Preencha este campo."></app-message>
         </div>
         <div class="ui-fluid ui-g-2 ui-sm-12">
           <label for="rg">RG</label>
@@ -32,21 +30,15 @@
         <div class="ui-fluid ui-g-4 ui-sm-12">
           <label for="nome">Nome</label>
           <input type="text" id="nome" pInputText #nome="ngModel" name="nome" ngModel required minlength="3">
-          <div class="alert alert-danger" *ngIf="nome.hasError('required') && nome.dirty">
-            Preencha este campo.
-          </div>
-          <div class="alert alert-danger" *ngIf="nome.hasError('minlength') && nome.dirty">
-            Mínino 3 caracteres.
-          </div>
+          <app-message [control]="nome" error="required" text="Preencha este campo."></app-message>
+          <app-message [control]="nome" error="minlength" text="Mínimo 3 caracteres."></app-message>
         </div>
         <div class="ui-fluid ui-g-2 ui-sm-12">
           <label for="nasc">Nascimento</label>
           <p-calendar [(ngModel)]="dateValue" [locale]="pt" dateFormat="dd/mm/yy" [showIcon]="true"
                       [monthNavigator]="true" [yearNavigator]="true" yearRange="1900:2030" id="nasc"
                       ngModel name="nascimento" required #nascimento="ngModel"></p-calendar>
-          <div class="alert alert-danger" *ngIf="nascimento.hasError('required') && nascimento.dirty">
-            Preencha este campo.
-          </div>
+          <app-message [control]="nascimento" error="required" text="Preencha este campo."></app-message>
         </div>
         <div class="ui-fluid ui-g-2 ui-sm-12">
           <label>Sexo</label>
@@ -123,7 +115,9 @@
 
             <div class="ui-fluid ui-g-9 ui-sm-12">
               <label for="titularConta">Nome do Titular</label>
-              <input type="text" id="titularConta" pInputText value="{{nome.value}}" name="nomeTitular" ngModel>
+              <input type="text" id="titularConta" pInputText value="{{nome.value}}" name="nomeTitular" ngModel
+                     required #nomeTitular="ngModel">
+              <app-message [control]="nomeTitular" error="required" text="Preencha este campo."></app-message>
             </div>
 
           </div>
@@ -132,7 +126,8 @@
 
             <div class="ui-fluid ui-g-2 ui-sm-12">
               <label>Conta</label>
-              <input type="text" pInputText name="conta" ngModel>
+              <input type="text" pInputText name="conta" ngModel #conta="ngModel" required>
+              <app-message [control]="conta" error="required" text="Preencha este campo."></app-message>
             </div>
             <div class="ui-fluid ui-g-1 ui-sm-12">
               <label>Dígito</label>
@@ -140,7 +135,8 @@
             </div>
             <div class="ui-fluid ui-g-2 ui-sm-12">
               <label>Agência</label>
-              <p-inputMask mask="9999" name="agencia" ngModel></p-inputMask>
+              <p-inputMask mask="9999" name="agencia" ngModel #agencia="ngModel" required></p-inputMask>
+              <app-message [control]="agencia" error="required" text="Preencha este campo."></app-message>
             </div>
             <div class="ui-fluid ui-g-1 ui-sm-12">
               <label>Dígito</label>
@@ -157,15 +153,19 @@
 
             <div class="ui-fluid ui-g-4 ui-sm-12">
               <label>Número do Cartão</label>
-              <p-inputMask mask="9999.9999.9999.9999" name="numeroCartao" ngModel></p-inputMask>
+              <p-inputMask mask="9999.9999.9999.9999" name="numeroCartao" ngModel
+              #numeroCartao="ngModel" required></p-inputMask>
+              <app-message [control]="numeroCartao" error="required" text="Preencha este campo."></app-message>
             </div>
             <div class="ui-fluid ui-g-1 ui-sm-12">
               <label>Mês</label>
-              <p-inputMask mask="99" name="mesCartao" ngModel></p-inputMask>
+              <p-inputMask mask="99" name="mesCartao" ngModel #mesCartao="ngModel" required></p-inputMask>
+              <app-message [control]="mesCartao" error="required" text="Preencha este campo."></app-message>
             </div>
             <div class="ui-fluid ui-g-1 ui-sm-12">
               <label>Ano</label>
-              <p-inputMask mask="99" name="anoCartao" ngModel></p-inputMask>
+              <p-inputMask mask="99" name="anoCartao" ngModel #anoCartao="ngModel" required></p-inputMask>
+              <app-message [control]="anoCartao" error="required" text="Preencha este campo."></app-message>
             </div>
             <div class="ui-fluid ui-g-3 ui-sm-12">
               <label>Operadora</label>

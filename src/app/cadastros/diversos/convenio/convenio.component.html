@@ -30,24 +30,7 @@
   </div>
 
   <div class="col-md" style="margin-top: 10px">
-    <p-dataTable [value]="convenios" [paginator]="true" [rows]="3" [responsive]="true">
-      <p-column styleClass="col-check">
-        <ng-template pTemplate="body">
-          <input type="checkbox">
-        </ng-template>
-      </p-column>
-      <p-column field="id" header="Id" styleClass="col-id"></p-column>
-      <p-column field="nome" header="Nome" styleClass="col-150"></p-column>
-      <p-column field="numero" header="Número" styleClass="col-90"></p-column>
-      <p-column field="telefone" header="Telefone" styleClass="col-120"></p-column>
-      <p-column field="observacao" header="Observação"></p-column>
-      <p-column styleClass="col-acoes">
-        <ng-template pTemplate="body">
-          <a href="#" class="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
-          <a type="button" class="fa fa-trash" pTooltip="Excluir" tooltipPosition="top"></a>
-        </ng-template>
-      </p-column>
-    </p-dataTable>
+    <app-table-dynamic [dados]="dados" [cols]="cols"></app-table-dynamic>
   </div>
 
 </div>

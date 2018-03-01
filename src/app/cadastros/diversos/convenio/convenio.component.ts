@@ -6,8 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./convenio.component.css']
 })
 export class ConvenioComponent implements OnInit {
-
-  convenios = [
+  dados = [
     {id: '1', nome: 'Cielo', numero: '55555', telefone: '11 4444-4444', observacao: 'Enviar remessa todo dia 15'},
     {id: '2', nome: 'Banco do Brasil', numero: '44444', telefone: '', observacao: ''},
     {id: '3', nome: 'Santander', numero: '333333', telefone: '', observacao: ''},
@@ -19,6 +18,13 @@ export class ConvenioComponent implements OnInit {
     {id: '9', nome: 'Teste', numero: '', telefone: '', observacao: ''},
     {id: '10', nome: 'Teste', numero: '', telefone: '', observacao: ''},
     {id: '11', nome: 'Teste', numero: '', telefone: '', observacao: ''}
+  ];
+  cols = [
+    {field: 'id', header: 'Id'},
+    {field: 'nome', header: 'Nome'},
+    {field: 'numero', header: 'Número'},
+    {field: 'telefone', header: 'Telefone'},
+    {field: 'observacao', header: 'Observação'}
   ];
   constructor() { }
 

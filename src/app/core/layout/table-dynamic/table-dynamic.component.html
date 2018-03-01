@@ -1,16 +1,11 @@
-<p-table>
-  <ng-template pTemplate="header">
-    <tr>
-      <th *ngFor="let col of cols">
-        {{col.header}}
-      </th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-x>
-    <tr>
-      <td *ngFor="let col of cols">
-        {{x[col.field]}}
-      </td>
-    </tr>
-  </ng-template>
-</p-table>
+<p-dataTable [value]="dados" [paginator]="true" [rows]="5" [responsive]="true"
+             [rowsPerPageOptions]="[5,10,15,20,25]">
+  <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
+  <p-column *ngFor="let col of cols" [field]="col.field" [header]="col.header"></p-column>
+  <p-column  [style]="{'width': '52px', 'text-align': 'center'}">
+    <ng-template pTemplate="body">
+      <a href="#" class="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>
+      <a type="button" class="fa fa-trash" pTooltip="Excluir" tooltipPosition="top"></a>
+    </ng-template>
+  </p-column>
+</p-dataTable>
