@@ -31,19 +31,19 @@
     <p-dataTable [value]="dados" [paginator]="true" [rows]="10" [responsive]="true"
       [rowsPerPageOptions]="[5,10,15,20,25]">
       <p-column [style]="{'width':'38px'}" selectionMode="multiple"></p-column>
-      <p-column field="id" header="Id" styleClass="col-id"></p-column>
+      <p-column field="id" header="Id" [style]="{'width': '52px', 'text-align': 'center'}"></p-column>
       <p-column field="nome" header="Nome"></p-column>
-      <p-column field="cpf" header="CPF" styleClass="col-cpf"></p-column>
-      <p-column field="telefone" header="Telefone" styleClass="col-120"></p-column>
-      <p-column field="email" header="E-mail" styleClass="col-200"></p-column>
-      <p-column field="status" header="Status" styleClass="col-status">
+      <p-column field="cpf" header="CPF" [style]="{'width': '150px', 'text-align': 'center'}"></p-column>
+      <p-column field="telefone" header="Telefone" [style]="{'width': '130px', 'text-align': 'center'}"></p-column>
+      <p-column field="email" header="E-mail"></p-column>
+      <p-column field="status" header="Status" [style]="{'width': '110px'}">
         <ng-template let-cli="rowData" pTemplate="body">
           <span class="badge status-span"
                 [ngClass]="{'badge-success': cli.status === 'Em dia', 'badge-danger': cli.status === 'Cancelado',
                 'badge-warning': cli.status === 'Inadimplente'}">{{cli.status}}</span>
         </ng-template>
       </p-column>
-      <p-column styleClass="col-acoes">
+      <p-column [style]="{'width': '80px', 'text-align': 'center'}">
         <ng-template pTemplate="body">
           <a class="fa fa-eye" pTooltip="Detalhes" tooltipPosition="top" routerLink="/instancias/cliente/detalhes"></a>
           <a href="#" class="fa fa-pencil" pTooltip="Editar" tooltipPosition="top"></a>

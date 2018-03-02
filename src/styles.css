@@ -10,43 +10,8 @@
   color: #fff;
 }
 
-.col-check{
-  width: 30px;
-  text-align: center;
-}
-
-.col-90{
-  width: 90px;
-}
-
-.col-acoes{
-  width: 80px;
-  text-align: center;
-}
-
-.col-120{
-  width: 120px;
-}
-
-.col-150{
-  width: 150px;
-}
-
-.col-200{
-  width: 200px;
-}
-
-.col-status{
-  width: 110px;
-}
-
 .status-span{
   text-transform: uppercase;
-}
-
-.col-cpf{
-  text-align: center;
-  width: 150px;
 }
 
 .badge-warning{
