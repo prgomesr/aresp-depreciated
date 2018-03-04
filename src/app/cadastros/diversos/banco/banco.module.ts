@@ -4,8 +4,7 @@ import {BancoRoutingModule} from './banco-routing.module';
 import {BancoComponent} from './banco.component';
 import {BancoDataComponent} from './banco-data/banco-data.component';
 import {SharedModule} from '../../../shared/shared.module';
-
-
+import { BancoService } from './banco.service';
 
 @NgModule({
   imports: [
@@ -13,6 +12,7 @@ import {SharedModule} from '../../../shared/shared.module';
     SharedModule,
     BancoRoutingModule
   ],
-  declarations: [BancoComponent, BancoDataComponent]
+  declarations: [BancoComponent, BancoDataComponent],
+  providers: [BancoService]
 })
 export class BancoModule { }

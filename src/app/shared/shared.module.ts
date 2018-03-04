@@ -14,6 +14,7 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   imports: [
@@ -34,7 +35,8 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     SelectButtonModule,
     DropdownModule,
     InputTextareaModule,
-    InputMaskModule
+    InputMaskModule,
+    TableModule
   ]
 })
 export class SharedModule { }

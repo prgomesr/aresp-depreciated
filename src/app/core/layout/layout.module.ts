@@ -8,6 +8,8 @@ import { TooltipModule } from 'primeng/tooltip';
 import { TableDynamicComponent } from './table-dynamic/table-dynamic.component';
 import { MessageComponent } from './message/message.component';
 import { ButtonComponent } from './button/button.component';
+import { TableModule } from 'primeng/table';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ButtonComponent } from './button/button.component';
     CommonModule,
     RouterModule,
     DataTableModule,
-    TooltipModule
+    TableModule,
+    TooltipModule,
+    ButtonModule
   ],
   declarations: [TableDynamicComponent, MessageComponent, ButtonComponent],
   exports: [TableDynamicComponent, MessageComponent, ButtonComponent]

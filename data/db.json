@@ -2,7 +2,15 @@
     "bancos": [
       {
         "nome": "Banco do Brasil",
+        "numero": "001",
+        "telefone": "17 3131 3131",
         "id": 1
+      },
+      {
+        "nome": "Santander",
+        "numero": "033",
+        "telefone": "17 3131 3232",
+        "id": 2
       }
     ]
-  }
+}

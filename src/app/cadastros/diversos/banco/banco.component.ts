@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {BancoService} from './banco.service';
 
 @Component({
   selector: 'app-banco',
@@ -7,18 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BancoComponent implements OnInit {
 
-  dados = [
-    {id: '1', nome: 'Banco do Brasil', numero: '001', telefone: '11 4444-4444'},
-    {id: '2500', nome: 'Banco do Brasil', numero: '001', telefone: '11 4444-4444'}
-  ];
+  bancos = [];
   cols = [
     {field: 'nome', header: 'Nome'},
     {field: 'numero', header: 'Número'},
     {field: 'telefone', header: 'Telefone'}
   ];
-  constructor() { }
+  constructor(private bancoService: BancoService) { }
 
   ngOnInit() {
+    this.consultar();
+  }
+
+  consultar() {
+    this.bancoService.listar().subscribe(bancos => this.bancos = bancos);
   }
 
 }
