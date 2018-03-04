@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SecretariaService } from './secretaria.service';
 
 @Component({
   selector: 'app-secretaria',
@@ -7,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SecretariaComponent implements OnInit {
 
-  dados = [
-    {id: '1', nome: 'Segurança Pública'}
-  ];
+  secretarias = [];
   cols = [
     {field: 'nome', header: 'Nome'}
   ];
-  constructor() { }
+  constructor(private secretariaService: SecretariaService) { }
 
   ngOnInit() {
+    this.consultar();
+  }
+
+  consultar() {
+    this.secretariaService.listar().subscribe(dados => this.secretarias = dados);
   }
 
 }

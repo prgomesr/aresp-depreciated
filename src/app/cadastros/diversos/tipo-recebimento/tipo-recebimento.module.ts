@@ -4,6 +4,7 @@ import {SharedModule} from '../../../shared/shared.module';
 import {TipoRecebimentoRoutingModule} from './tipo-recebimento-routing.module';
 import {TipoRecebimentoComponent} from './tipo-recebimento.component';
 import {TipoRecebimentoDataComponent} from './tipo-recebimento-data/tipo-recebimento-data.component';
+import { TipoRecebimentoService } from './tipo-recebimento.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import {TipoRecebimentoDataComponent} from './tipo-recebimento-data/tipo-recebim
     SharedModule,
     TipoRecebimentoRoutingModule
   ],
-  declarations: [TipoRecebimentoComponent, TipoRecebimentoDataComponent]
+  declarations: [TipoRecebimentoComponent, TipoRecebimentoDataComponent],
+  providers: [TipoRecebimentoService]
 })
 export class TipoRecebimentoModule { }

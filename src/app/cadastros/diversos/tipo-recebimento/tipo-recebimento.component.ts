@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TipoRecebimentoService } from './tipo-recebimento.service';
 
 @Component({
   selector: 'app-tipo-recebimento',
@@ -7,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoRecebimentoComponent implements OnInit {
 
-  dados = [
-    {id: '1', nome: 'Aluguel de Quadra'}]
-  ;
+  dados = [];
   cols = [
     {field: 'nome', header: 'Nome'}
   ];
-  constructor() { }
+  constructor(private tipoRecebimentoService: TipoRecebimentoService) { }
 
   ngOnInit() {
+    this.consultar();
+  }
+
+  consultar() {
+    this.tipoRecebimentoService.listar().subscribe(dados => this.dados = dados);
   }
 
 }

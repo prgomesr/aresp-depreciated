@@ -4,6 +4,7 @@ import {GrupoRoutingModule} from './grupo-routing.module';
 import {SharedModule} from '../../../shared/shared.module';
 import {GrupoComponent} from './grupo.component';
 import {GrupoDataComponent} from './grupo-data/grupo-data.component';
+import { GrupoService } from './grupo.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import {GrupoDataComponent} from './grupo-data/grupo-data.component';
     GrupoRoutingModule,
     SharedModule
   ],
-  declarations: [GrupoComponent, GrupoDataComponent]
+  declarations: [GrupoComponent, GrupoDataComponent],
+  providers: [GrupoService]
 })
 export class GrupoModule { }

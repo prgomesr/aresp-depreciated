@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StatusParcelaService } from './status-parcela.service';
 
 @Component({
   selector: 'app-status-parcela',
@@ -7,16 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StatusParcelaComponent implements OnInit {
 
-  dados = [
-    {id: '1', situacao: 'Em dia', descricao: ''}
-  ];
+  dados = [];
   cols = [
     {field: 'situacao', header: 'Situaçao'},
     {field: 'descricao', header: 'Descrição'}
   ];
-  constructor() { }
+  constructor(private statusParcelaService: StatusParcelaService) { }
 
   ngOnInit() {
+    this.consultar();
+  }
+
+  consultar() {
+    this.statusParcelaService.listar().subscribe(dados => this.dados = dados);
   }
 
 }

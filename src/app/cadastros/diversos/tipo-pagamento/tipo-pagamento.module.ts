@@ -4,6 +4,7 @@ import {SharedModule} from '../../../shared/shared.module';
 import {TipoPagamentoRoutingModule} from './tipo-pagamento-routing.module';
 import {TipoPagamentoComponent} from './tipo-pagamento.component';
 import {TipoPagamentoDataComponent} from './tipo-pagamento-data/tipo-pagamento-data.component';
+import { TipoPagamentoService } from './tipo-pagamento.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import {TipoPagamentoDataComponent} from './tipo-pagamento-data/tipo-pagamento-d
     SharedModule,
     TipoPagamentoRoutingModule
   ],
-  declarations: [TipoPagamentoComponent, TipoPagamentoDataComponent]
+  declarations: [TipoPagamentoComponent, TipoPagamentoDataComponent],
+  providers: [TipoPagamentoService]
 })
 export class TipoPagamentoModule { }

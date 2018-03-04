@@ -4,6 +4,7 @@ import {SharedModule} from '../../../shared/shared.module';
 import {StatusParcelaRoutingModule} from './status-parcela-routing.module';
 import {StatusParcelaComponent} from './status-parcela.component';
 import {StatusParcelaDataComponent} from './status-parcela-data/status-parcela-data.component';
+import { StatusParcelaService } from './status-parcela.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import {StatusParcelaDataComponent} from './status-parcela-data/status-parcela-d
     SharedModule,
     StatusParcelaRoutingModule
   ],
-  declarations: [StatusParcelaComponent, StatusParcelaDataComponent]
+  declarations: [StatusParcelaComponent, StatusParcelaDataComponent],
+  providers: [StatusParcelaService]
 })
 export class StatusParcelaModule { }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TipoPagamentoService } from './tipo-pagamento.service';
 
 @Component({
   selector: 'app-tipo-pagamento',
@@ -7,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TipoPagamentoComponent implements OnInit {
 
-  dados = [
-    {id: '1', nome: 'Cheque'}]
-  ;
+  dados = [];
   cols = [
     {field: 'nome', header: 'Nome'}
   ];
-  constructor() { }
+  constructor(private tipoPagamentoService: TipoPagamentoService) { }
 
   ngOnInit() {
+    this.consultar();
+  }
+
+  consultar() {
+    this.tipoPagamentoService.listar().subscribe(dados => this.dados = dados);
   }
 
 }

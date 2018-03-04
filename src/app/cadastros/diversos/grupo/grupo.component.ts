@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GrupoService } from './grupo.service';
 
 @Component({
   selector: 'app-grupo',
@@ -7,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GrupoComponent implements OnInit {
 
-  dados = [
-    {id: '1', nome: 'BB1'}
-  ];
+  grupos = [];
   cols = [
     {field: 'nome', header: 'Nome'}
   ];
 
-  constructor() { }
+  constructor(private grupoService: GrupoService) { }
 
   ngOnInit() {
+    this.consultar();
   }
 
+  consultar() {
+    this.grupoService.listar().subscribe(dados => this.grupos = dados);
+  }
 }

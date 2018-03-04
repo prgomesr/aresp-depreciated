@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OperadoraService } from './operadora.service';
 
 @Component({
   selector: 'app-operadora',
@@ -7,16 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OperadoraComponent implements OnInit {
 
-  dados = [
-    {id: '1', nome: 'Visa', imagem: 'imagem.jpg' }
-  ];
+  operadoras = [];
   cols = [
     {field: 'nome', header: 'Nome'},
     {field: 'imagem', header: 'Imagem'}
   ];
-  constructor() { }
+  constructor(private operadoraService: OperadoraService) { }
 
   ngOnInit() {
+    this.consultar();
   }
 
+  consultar() {
+    this.operadoraService.listar().subscribe(dados => this.operadoras = dados);
+  }
 }

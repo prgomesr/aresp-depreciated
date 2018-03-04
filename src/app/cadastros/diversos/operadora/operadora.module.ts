@@ -4,6 +4,7 @@ import {SharedModule} from '../../../shared/shared.module';
 import {OperadoraRoutingModule} from './operadora-routing.module';
 import {OperadoraComponent} from './operadora.component';
 import {OperadoraDataComponent} from './operadora-data/operadora-data.component';
+import { OperadoraService } from './operadora.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,7 @@ import {OperadoraDataComponent} from './operadora-data/operadora-data.component'
     SharedModule,
     OperadoraRoutingModule
   ],
-  declarations: [OperadoraComponent, OperadoraDataComponent]
+  declarations: [OperadoraComponent, OperadoraDataComponent],
+  providers: [OperadoraService]
 })
 export class OperadoraModule { }
