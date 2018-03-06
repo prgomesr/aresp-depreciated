@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 
 import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
-import { BancoService } from './cadastros/diversos/banco/banco.service';
-import {BrowserModule} from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
+import { ToastyModule } from 'ng2-toasty';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import {BrowserModule} from '@angular/platform-browser';
     BrowserAnimationsModule,
     HttpClientModule,
     CoreModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastyModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
