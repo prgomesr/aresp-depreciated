@@ -1,0 +1,19 @@
+<div class="container">
+
+  <div class="col-md">
+    <h1>Fornecedores</h1>
+  </div>
+
+  <div class="col-md">
+    <hr>
+  </div>
+
+  <div class="col-md">
+    <app-button text="/instancias/fornecedor/novo"></app-button>
+  </div>
+
+  <div class="col-md" style="margin-top: 10px">
+    <app-table-dynamic [dados]="fornecedores" [cols]="cols"></app-table-dynamic>
+  </div>
+
+</div>

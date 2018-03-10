@@ -6,7 +6,6 @@ import {LayoutComponent} from './core/layout/layout.component';
 import {Pagina404Component} from './core/pagina-404/pagina-404.component';
 import {AcessoNegadoComponent} from './core/acesso-negado/acesso-negado.component';
 import {Pagina500Component} from './core/pagina-500/pagina-500.component';
-import {CoreModule} from './core/core.module';
 import {LoginComponent} from './core/login/login.component';
 
 const routes: Routes = [

@@ -21,6 +21,8 @@ const routes: Routes = [
       { path: 'diversos/tipo-recebimento', loadChildren: '../cadastros/diversos/tipo-recebimento/tipo-recebimento.module#TipoRecebimentoModule' },
       { path: 'diversos/tipo-socio', loadChildren: '../cadastros/diversos/tipo-socio/tipo-socio.module#TipoSocioModule' },
       { path: 'instancias/cliente', loadChildren: '../cadastros/instancias/cliente/cliente.module#ClienteModule' },
+      { path: 'instancias/empresa', loadChildren: '../cadastros/instancias/empresa/empresa.module#EmpresaModule' },
+      { path: 'instancias/fornecedor', loadChildren: '../cadastros/instancias/fornecedor/fornecedor.module#FornecedorModule' },
     ]
   }
 ];
