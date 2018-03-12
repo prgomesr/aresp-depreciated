@@ -1,0 +1,52 @@
+<div class="container">
+
+  <div class="col-md">
+    <h1>Contas a Pagar</h1>
+  </div>
+
+  <div class="col-md">
+    <hr>
+  </div>
+
+  <div class="col-md">
+
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center">R$ 4.900,17</h5>
+            <footer style="text-align: center">Contas Pagas</footer>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white bg-warning mb-3">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center">R$ 4.900,17</h5>
+            <footer style="text-align: center">Contas a Pagar</footer>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white bg-danger mb-3">
+          <div class="card-body">
+            <h5 class="card-title" style="text-align: center">R$ 4.900,17</h5>
+            <footer style="text-align: center">Contas Vencidas</footer>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="col-md">
+    <app-button text="/financeiro/contas-pagar/novo"></app-button>
+  </div>
+
+  <div class="col-md" style="margin-top: 10px">
+    <app-table-dynamic [dados]="contas" [cols]="cols"></app-table-dynamic>
+  </div>
+
+</div>
