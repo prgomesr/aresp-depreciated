@@ -8,6 +8,10 @@ import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastyModule } from 'ng2-toasty';
+import { ContasPagarComponent } from './financeiro/contas-pagar/contas-pagar.component';
+import { ContasPagarDataComponent } from './financeiro/contas-pagar/contas-pagar-data/contas-pagar-data.component';
+import { ContasReceberComponent } from './financeiro/contas-receber/contas-receber.component';
+import { ContasReceberDataComponent } from './financeiro/contas-receber/contas-receber-data/contas-receber-data.component';
 
 
 @NgModule({

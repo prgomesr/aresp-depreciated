@@ -23,6 +23,8 @@ const routes: Routes = [
       { path: 'instancias/cliente', loadChildren: '../cadastros/instancias/cliente/cliente.module#ClienteModule' },
       { path: 'instancias/empresa', loadChildren: '../cadastros/instancias/empresa/empresa.module#EmpresaModule' },
       { path: 'instancias/fornecedor', loadChildren: '../cadastros/instancias/fornecedor/fornecedor.module#FornecedorModule' },
+      { path: 'financeiro/contas-pagar', loadChildren: '../financeiro/contas-pagar/contas-pagar.module#ContasPagarModule' },
+      { path: 'financeiro/contas-receber', loadChildren: '../financeiro/contas-receber/contas-receber.module#ContasReceberModule' }
     ]
   }
 ];
