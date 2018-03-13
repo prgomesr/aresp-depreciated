@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class ContasPagarComponent implements OnInit {
 
   contas = [];
+  periodos = [
+    {name: 'Mês atual', value: 1},
+    {name: 'Últimos 7 dias', value: 2},
+    {name: 'Todos', value: 3},
+  ];
   cols = [{}];
 
   constructor() { }

@@ -42,7 +42,29 @@
   </div>
 
   <div class="col-md">
-    <app-button text="/financeiro/contas-pagar/novo"></app-button>
+    <div class="btn-toolbar clearfix" role="toolbar">
+
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-outline-secondary fa fa-plus"
+                pTooltip="Novo" tooltipPosition="top" routerLink="/financeiro/contas-pagar/novo"></button>
+      </div>
+
+      <div class="btn-group ml-5" role="group">
+        <button type="button" class="btn btn-outline-secondary fa fa-trash-o"
+                pTooltip="Excluir" tooltipPosition="top"></button>
+      </div>
+
+      <div class="btn-group ml-2" role="group">
+        <button type="button" class="btn btn-outline-secondary">Emitir cheque</button>
+      </div>
+
+      <div class="input-group ml-2 col-md-4">
+        <select class="form-control" id="periodo">
+          <option *ngFor="let p of periodos">{{p.name}}</option>
+        </select>
+      </div>
+
+    </div>
   </div>
 
   <div class="col-md" style="margin-top: 10px">
