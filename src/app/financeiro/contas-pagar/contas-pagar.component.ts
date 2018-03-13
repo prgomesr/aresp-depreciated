@@ -9,9 +9,9 @@ export class ContasPagarComponent implements OnInit {
 
   contas = [];
   periodos = [
-    {name: 'Mês atual', value: 1},
-    {name: 'Últimos 7 dias', value: 2},
-    {name: 'Todos', value: 3},
+    {label: 'Mês atual', value: 1},
+    {label: 'Últimos 7 dias', value: 2},
+    {label: 'Todos', value: 3},
   ];
   cols = [{}];
 

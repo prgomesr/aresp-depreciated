@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContasReceberComponent implements OnInit {
 
+  contas = [];
+  periodos = [
+    {label: 'Mês atual', value: 1},
+    {label: 'Últimos 7 dias', value: 2},
+    {label: 'Todos', value: 3},
+  ];
+  cols = [{}];
   constructor() { }
 
   ngOnInit() {
