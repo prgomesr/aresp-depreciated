@@ -13,7 +13,7 @@
 
       <div class="form-row">
         <div class="ui-fluid ui-g-6 ui-sm-12">
-          <label>Descrição</label>
+          <label for="descricao">Descrição</label>
           <input type="text" pInputText id="descricao" required ngModel name="descricao" #descricao="ngModel">
           <app-message [control]="descricao" error="required" text="Preencha este campo."></app-message>
         </div>
@@ -62,9 +62,9 @@
                       ngModel #periodo></p-dropdown>
         </div>
         <div class="ui-fluid ui-g-2 ui-sm-12">
-          <label>Quantas vezes?</label>
+          <label for="ocorrencias">Quantas vezes?</label>
           <input type="text" pInputText id="ocorrencias" ngModel name="ocorrencias"
-                 #ocorrencias="ngModel" style="width: 50px">
+                 #ocorrencias="ngModel">
         </div>
       </div>
 
